@@ -4,7 +4,7 @@ pipeline {
         stage('Build') { 
             steps { 
                 echo "Build Docker Image" 
-                bat "docker build -t registrationdocker ." 
+                bat "docker build -t register ." 
             } 
         }
          stage('Run') { 
@@ -13,7 +13,7 @@ pipeline {
                 bat "docker rm -f mycontainer || exit 0" 
                 
                      
-                bat "docker run -d -p 5000:5000 --name mycontainer registrationdocker" 
+                bat "docker run -d -p 5000:5000 --name pyff register" 
                 
             } 
         } 
