@@ -10,7 +10,7 @@ pipeline {
          stage('Run') { 
             steps { 
                 echo "Run application in Docker Container" 
-                bat "docker rm -f mycontainer || exit 0" 
+                bat "docker rm -f pyff || exit 0" 
                 
                      
                 bat "docker run -d -p 5000:5000 --name pyff register" 
